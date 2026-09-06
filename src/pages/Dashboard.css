@@ -1,0 +1,718 @@
+/* =========================
+   DASHBOARD
+========================= */
+.current-month {
+  margin-bottom: 20px;
+}
+
+.current-month h2 {
+  color: #242136;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.current-month p {
+  color: #918c9e;
+  font-size: 13px;
+}
+
+body.dark-mode .current-month h2 {
+  color: white;
+}
+
+body.dark-mode .current-month p {
+  color: #aaa6b5;
+}
+.dashboard {
+  width: 100%;
+}
+
+
+/* =========================
+   ADD TRANSACTION FORM
+========================= */
+
+.transaction-form {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #e8e6ef;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgba(40, 30, 80, 0.05);
+}
+
+.transaction-form h2 {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.transaction-form form {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.transaction-form input,
+.transaction-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd9e8;
+  border-radius: 10px;
+  background: #faf9fc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+  border-color: #6c4ce8;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(108, 76, 232, 0.08);
+}
+
+.transaction-form button {
+  border: none;
+  background: #6c4ce8;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.transaction-form button:hover {
+  background: #5b3ed0;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(108, 76, 232, 0.25);
+}
+
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  padding: 23px;
+  border-radius: 18px;
+  border: 1px solid #e8e6ef;
+  box-shadow: 0 8px 25px rgba(40, 30, 80, 0.05);
+  transition: 0.25s ease;
+}
+
+.summary-card::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(108, 76, 232, 0.08);
+  right: -25px;
+  top: -25px;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(40, 30, 80, 0.10);
+}
+
+.summary-card p {
+  color: #777281;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.summary-card h2 {
+  font-size: 27px;
+  color: #24212e;
+}
+
+
+/* Give each card a subtle identity */
+
+.summary-card:nth-child(1) {
+  border-top: 3px solid #6c4ce8;
+}
+
+.summary-card:nth-child(2) {
+  border-top: 3px solid #35a76f;
+}
+
+.summary-card:nth-child(3) {
+  border-top: 3px solid #e05252;
+}
+
+.summary-card:nth-child(4) {
+  border-top: 3px solid #f0a629;
+}
+
+
+/* =========================
+   RECENT TRANSACTIONS
+========================= */
+
+.recent-transactions {
+  background: white;
+  border: 1px solid #e8e6ef;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(40, 30, 80, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 21px;
+}
+
+
+/* =========================
+   TRANSACTION ROW
+========================= */
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 5px;
+  border-bottom: 1px solid #eeeaf3;
+  transition: 0.2s ease;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.transaction:hover {
+  background: #faf9ff;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+.transaction h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #282532;
+}
+
+.transaction p {
+  color: #8a8692;
+  font-size: 13px;
+}
+
+.transaction strong {
+  font-size: 15px;
+  padding: 7px 12px;
+  border-radius: 8px;
+}
+
+.transaction strong.income {
+  color: #218c5a;
+  background: #eaf8f1;
+}
+
+.transaction strong.expense {
+  color: #d44949;
+  background: #fff0f0;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .transaction-form,
+body.dark-mode .summary-card,
+body.dark-mode .recent-transactions {
+  background: #211e2b;
+  border-color: #353142;
+  color: white;
+}
+
+body.dark-mode .transaction-form input,
+body.dark-mode .transaction-form select {
+  background: #2a2637;
+  color: white;
+  border-color: #464052;
+}
+
+body.dark-mode .transaction-form input:focus,
+body.dark-mode .transaction-form select:focus {
+  background: #302b3d;
+}
+
+body.dark-mode .summary-card p,
+body.dark-mode .transaction p {
+  color: #aaa6b5;
+}
+
+body.dark-mode .summary-card h2,
+body.dark-mode .transaction h3,
+body.dark-mode .section-header h2 {
+  color: white;
+}
+
+body.dark-mode .transaction {
+  border-color: #353142;
+}
+
+body.dark-mode .transaction:hover {
+  background: #292533;
+}
+
+body.dark-mode .transaction strong.income {
+  color: #63d39b;
+  background: #17382a;
+}
+
+body.dark-mode .transaction strong.expense {
+  color: #ff8585;
+  background: #3c2020;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .transaction-form form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .summary-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .transaction-form {
+    padding: 20px;
+  }
+
+  .transaction-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-card h2 {
+    font-size: 24px;
+  }
+
+  .recent-transactions {
+    padding: 20px;
+  }
+
+  .transaction {
+    gap: 15px;
+  }
+
+  .transaction strong {
+    white-space: nowrap;
+  }
+
+}
+
+/* =========================
+   SECTION SUBTITLE
+========================= */
+
+.section-subtitle {
+  margin-top: 5px;
+  color: #8a8692;
+  font-size: 13px;
+}
+
+
+/* =========================
+   ADD TRANSACTION BUTTON
+========================= */
+
+.add-transaction-btn {
+  border: none;
+  background: #6c4ce8;
+  color: white;
+  padding: 11px 17px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-transaction-btn:hover {
+  background: #5b3ed0;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(108, 76, 232, 0.25);
+}
+
+
+/* =========================
+   EMPTY TRANSACTIONS
+========================= */
+
+.empty-transactions {
+  text-align: center;
+  padding: 45px 20px;
+}
+
+.empty-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #f0edff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+}
+
+.empty-transactions h3 {
+  margin-bottom: 7px;
+}
+
+.empty-transactions p {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.empty-add-btn {
+  border: none;
+  background: #6c4ce8;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* =========================
+   MODAL OVERLAY
+========================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 15, 35, 0.55);
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  z-index: 1000;
+
+  animation: fadeIn 0.2s ease;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.transaction-modal {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+
+  animation: modalAppear 0.25s ease;
+}
+
+
+/* =========================
+   MODAL HEADER
+========================= */
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 25px;
+}
+
+.modal-header h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.modal-header p {
+  color: #888;
+  font-size: 13px;
+}
+
+.close-modal {
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f3f1f7;
+  color: #555;
+
+  font-size: 24px;
+  line-height: 1;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.close-modal:hover {
+  background: #e9e5f0;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3d3947;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 13px;
+
+  border: 1px solid #ddd9e8;
+  border-radius: 9px;
+
+  background: #faf9fc;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #6c4ce8;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(108, 76, 232, 0.08);
+}
+
+
+/* Two columns */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+
+/* =========================
+   MODAL BUTTONS
+========================= */
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 8px;
+}
+
+.cancel-btn {
+  border: 1px solid #ddd9e8;
+  background: white;
+  color: #555;
+
+  padding: 11px 17px;
+  border-radius: 9px;
+
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.save-transaction-btn {
+  border: none;
+  background: #6c4ce8;
+  color: white;
+
+  padding: 11px 18px;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.save-transaction-btn:hover {
+  background: #5b3ed0;
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================
+   DARK MODE MODAL
+========================= */
+
+body.dark-mode .transaction-modal {
+  background: #211e2b;
+  color: white;
+}
+
+body.dark-mode .modal-header h2 {
+  color: white;
+}
+
+body.dark-mode .modal-header p {
+  color: #aaa6b5;
+}
+
+body.dark-mode .close-modal {
+  background: #302b3d;
+  color: #ddd;
+}
+
+body.dark-mode .close-modal:hover {
+  background: #3a3448;
+}
+
+body.dark-mode .form-group label {
+  color: #ddd;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select {
+  background: #2a2637;
+  color: white;
+  border-color: #464052;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group select:focus {
+  background: #302b3d;
+}
+
+body.dark-mode .cancel-btn {
+  background: #2a2637;
+  color: #ddd;
+  border-color: #464052;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .section-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .add-transaction-btn {
+    padding: 9px 12px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .transaction-modal {
+    padding: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .save-transaction-btn {
+    width: 100%;
+  }
+}

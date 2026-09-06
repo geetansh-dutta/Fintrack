@@ -1,0 +1,125 @@
+.analytics-page {
+  width: 100%;
+}
+
+.analytics-heading {
+  margin-bottom: 25px;
+}
+
+.analytics-heading h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.analytics-heading p {
+  color: #777;
+}
+
+
+/* Cards */
+
+.analytics-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.analytics-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #e8e6ef;
+}
+
+.analytics-card p {
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.analytics-card h2 {
+  color: #6c4ce8;
+}
+
+
+/* Sections */
+
+.analytics-section {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #e8e6ef;
+  margin-bottom: 25px;
+}
+
+.analytics-section h2 {
+  margin-bottom: 25px;
+}
+
+
+/* Category */
+
+.category-item {
+  margin-bottom: 20px;
+}
+
+.category-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.category-bar {
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.category-fill {
+  height: 100%;
+  background: #6c4ce8;
+  border-radius: 10px;
+}
+
+
+/* Income vs Expense */
+
+.comparison-item {
+  margin-bottom: 25px;
+}
+
+.comparison-item p {
+  margin-bottom: 8px;
+}
+
+.comparison-bar {
+  height: 12px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.income-bar {
+  height: 100%;
+  background: #20a464;
+  border-radius: 10px;
+}
+
+.expense-bar {
+  height: 100%;
+  background: #e05252;
+  border-radius: 10px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+  .analytics-cards {
+    grid-template-columns: 1fr;
+  }
+
+}
